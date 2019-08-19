@@ -5,7 +5,7 @@ class HotelResultService {
         return axios
             .get('https://homework-app.rocketmiles.com/fe-homework/rates')
             .then(response => response.data)
-            .catch(() => {})
+            .catch(error => error.response.data);
     }
 }
 
